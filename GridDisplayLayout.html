@@ -6,34 +6,92 @@
     <title>page title---page title2</title>
     <style type="text/css">
         .wrapper {
+            width: 1000px;
+            height: 500px;
+            border: 2px solid red;
+            /* display: inline-grid ; */
             display: grid;
-            grid-template-columns: 200px 50px 100px;
-            grid-template-rows: 100px 150px 200px;
+            /* grid-template-columns: [first] 100px [line2] 100px [line3] 100px;  */
+            /* grid-template-columns: repeat(3,100px [column]); */
+            /* grid-template-columns: 容器分解列，分成几行激烈表格; */
+            grid-template-columns: 100px 100px 100px  ;
+            grid-template-rows: 100px 100px 100px  ;
+            /* justify-items 每个格子里面的item水平对齐方式*/
+            justify-items: center;
+            /* align-items 每个格子里面的内容垂直对齐方式*/
+            align-items: center;
+            /* place-items 每个格子里面的内容水平和垂直对齐统写方式*/
+            place-items: center center;
+            /* grid-template-columns: 40px 50px auto 50px 40px;
+            grid-template-rows: 25% 100px auto; */
+            /* grid-gap: 每个网格之间的空隙大小*/
+            grid-gap: 15px 10px;
+            /*grid-auto-columns当网格中的网格项多于单元格时，或者当网格项位于显式网格之外时，就会创建隐式轨道*/
+            grid-auto-columns: 60px;
+            /* justify-content：网格在容器内的配置*/
+            /* justify-content: space-around;
+            align-content: space-around;  */
+            place-content: space-around space-around;
+            /* grid-template-areas: 网格模板区域 具体分割命名*/
+            grid-template-areas:
+                "head head head"
+                "middle middle middle"
+                "footer footer footer"
+        
 
         }
 
-        .div1{
+        .div1 {
+            background: yellow;
+            width: 100px;
+            height: 100px;
+        }
+
+        .div2 {
+            background: green;
+            width: 100px;
+            height: 100px;
+        }
+
+        /*
+        #id1 {
+            /* grid-column-start: 1;
+            grid-column-end: 4; */
+        /* grid-column: 1/4; */
+        /*equal above css code*/
+        /* grid-column: 1/4; */
+        /* } */
+
+
+        /* #item1 {
+            grid-column-start: 1;
+            grid-column-end: 3;
+            background:blueviolet;
+        }
+
+        #item3 {
+            grid-row-start: 2;
+            grid-row-end: 4;
             background: red
         }
-        .div2{
-            background: blue;
-        }
-        #id1{
-            grid-column-start: 1;
+
+        #item4 {
+            grid-column-start: 2;
             grid-column-end: 4;
-        }
-     
+            background: blue;
+        } */
     </style>
 </head>
 
 <body>
+    <button> fdsafds</button>
     <div class="wrapper">
-        <div id="id1" class="div1">1</div>
-        <div class="div2">2</div>
-        <div class="div1">3</div>
-        <div class="div2">4</div>
-        <div class="div1">5</div>
-        <div class="div2">6</div>
+        <div id="item1" class="div1">11111111111111</div>
+        <div id="item2" class="div2">2</div>
+        <div id="item3" class="div1">3</div>
+        <div id="item4" class="div2">4</div>
+        <div id="item5" class="div1">5</div>
+        <div id="item6" class="div2">6</div>
     </div>
 </body>
 

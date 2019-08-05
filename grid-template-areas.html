@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html language="ZH">
+
+<head>
+    <meta charset="UTF-F">
+    <title>page title---page title2</title>
+    <style type="text/css">
+        #page {
+            display: grid;
+            width: 100%;
+            height: 250px;
+            grid-template-areas:
+                "head head"
+                "nav  main"
+                "nav  foot";
+            grid-template-columns: 150px 1fr;
+            grid-template-rows: 50px 1fr 30px;
+        }
+
+        #page>header {
+            grid-area: nav;
+            background-color: #8ca0ff;
+        }
+
+        #page>nav {
+            grid-area: head;
+            background-color: #ffa08c;
+        }
+
+        #page>main {
+            grid-area: main;
+            background-color: #ffff64;
+        }
+
+        #page>footer {
+            grid-area: foot;
+            background-color: #8cffa0;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="page">
+        <header>Header</header>
+        <nav>Navigation</nav>
+        <main>Main area</main>
+        <footer>Footer</footer>
+    </section>
+</body>
+
+</html>
