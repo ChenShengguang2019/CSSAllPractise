@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html language="ZH">
+<head>
+    <meta charset="UTF-F">
+    <title>page title---page title2</title>
+    <style type="text/css">
+    .divAbove > div{
+        --size:100px;
+    }
+    .div1{
+    
+        font-size: calc( var(--size)*2);
+        
+    }
+    .div2{
+        font-size: calc( var(--size)*1);
+    }
+    </style>
+</head>
+<body>
+    <div class="divAbove">
+    <div class="div1">
+         div1
+         <div class="div2">
+                div2
+           </div>
+    </div>
+</div>
+  
+</body>
+</html>
